@@ -1,8 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom';
-import React from 'react';
+import { Link, useNavigate } from 'react-router-dom'
+import React from 'react'
 
 
-function NavBar() {
+function Navbar() {
  
   
 
@@ -27,4 +27,4 @@ function NavBar() {
   )
 }
 
-export default NavBar
+export default Navbar
