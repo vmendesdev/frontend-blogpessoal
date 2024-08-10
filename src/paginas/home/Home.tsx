@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './Home.css';
 
-function Home() {
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  return (
-    <div>
-      {loggedIn ? (
-        <h1>Bem-vindo de volta!</h1>
-      ) : (
-        <button onClick={() => setLoggedIn(true)}>Entrar</button>
-      )}
-    </div>
-  );
+interface minhaProps {
+    title: string;
+    description: string;
+  }
+  
+function Home(props:minhaProps){
+    return (
+        <>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
+        </>
+    );
 }
+
 export default Home;
