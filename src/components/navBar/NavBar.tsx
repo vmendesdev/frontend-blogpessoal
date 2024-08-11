@@ -1,7 +1,7 @@
 import React from "react"
 
 
-function Navbar() {
+function NavBar() {
  
   
 
@@ -24,4 +24,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default NavBar
