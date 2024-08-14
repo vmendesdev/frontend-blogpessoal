@@ -1,66 +1,50 @@
-   <h1>Frontend Blog Pessoal 🌐</h1>
-    <p>
-        Este projeto foi desenvolvido durante o bootcamp da Generation Brasil e representa o front-end de um blog pessoal que consumirá o back-end do blog pessoal.
-    </p>
-    <p><strong>Status:</strong> Em desenvolvimento ⚠️<br>
-        <em>Nota: O deploy ainda não foi realizado. A seção sobre deploy será adicionada futuramente.</em>
-    </p>
-<h2>Funcionalidades Principais 🚀</h2>
-    <ul>
-        <li><strong>CRUD de Usuários</strong> 👤</li>
-        <li><strong>CRUD de Temas</strong> 🎨</li>
-        <li><strong>CRUD de Postagens</strong> 📝</li>
-    </ul>
-    <h2>Ferramentas Utilizadas 🛠️</h2>
-    <ul>
-        <li><strong>VSCode</strong>: Ambiente de desenvolvimento integrado.</li>
-       <!-- <li><strong>Render</strong>: Serviço de hospedagem para aplicativos web.</li>
-        <li><strong>Swagger</strong>: Ferramenta para documentação e teste de APIs.</li>
-    </ul>-->
-<h2>Camadas Principais do Frontend 🏗️</h2>
-    <ol>
-        <li>
-            <strong>Camada de Apresentação</strong>:
-            <ul>
-                <li>Layout e interface do usuário.</li>
-                <li>Componentes visuais e estilização (HTML, CSS, Tailwind CSS).</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Camada de Lógica de Aplicação</strong>:
-            <ul>
-                <li>Interações do usuário e manipulação de dados.</li>
-                <li>Implementação de funcionalidades (JavaScript, React).</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Camada de Comunicação com o Back-end</strong>:
-            <ul>
-                <li>Consumo de APIs REST para enviar e receber dados.</li>
-                <li>Utilização de bibliotecas para requisições HTTP (Axios, Fetch API).</li>
-            </ul>
-        </li>
-    </ol>
-    <h2>Colaboração 🤝</h2>
-    <p>Para reproduzir este projeto em sua máquina local, siga os passos abaixo:</p>
-    <ol>
-        <li><strong>Clone o repositório</strong>:<br>
-            <code>git clone https://github.com/vmendesdev/frontend-blogpessoal</code>
-        </li>
-        <li><strong>Instale as dependências</strong>:<br>
-            <code>npm install</code>
-        </li>
-        <li><strong>Inicie o projeto</strong>:<br>
-            <code>npm start</code>
-        </li>
-        <li><strong>Configurações adicionais</strong>:<br>
-            <ul>
-                <li>Certifique-se de que o back-end esteja rodando para que o front-end possa consumir a API.</li>
-                <li>Utilize o Swagger para testar e documentar as rotas do back-end.</li>
-            </ul>
-        </li>
-        <li><strong>Deploy (Comentado)</strong>:<br>
-            <code># npm run deploy</code><br>
-            <em>(Nota: O deploy ainda não foi realizado. Esta seção será atualizada no futuro.)</em>
-        </li>
-    </ol>
+# React + TypeScript + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
+
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
+
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
